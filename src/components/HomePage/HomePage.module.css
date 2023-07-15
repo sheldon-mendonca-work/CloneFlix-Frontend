@@ -1,0 +1,122 @@
+.homePage{
+    color: white;
+    font-size: 1.5rem;
+    z-index: -2;
+}
+
+.headingSection{
+    background-color: transparent;
+    background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.8) 100%);
+    overflow: hidden;
+    height: 45rem;
+    position: relative;
+    
+}
+
+.netflixIcon{
+    width: 9.25rem;
+    height: 2.5rem;
+    color: rgb(229,9,20);
+    fill: currentColor;
+    display: block;
+}
+
+.headingBanner{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    z-index: -1;
+}
+
+.headingBannerImg{
+    width: 100%;
+    object-fit: cover;
+}
+
+.headingHeader{
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    height: 5.5rem;
+    padding: 1rem 6rem;
+    width: 100%;
+}
+
+.headingActions{
+    display: flex;
+}
+
+.headingContentDiv{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.headingContent{
+    text-align: center;
+}
+
+.splitHalfSection{
+    display: flex;
+    padding: 4rem;
+    gap: 1rem;
+    background-color: black;
+}
+
+.splitHalfDiv{
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.splitHalfImgDiv{
+    overflow: hidden;
+    height: 25rem;
+}
+
+.splitHalfContentDiv{
+    text-align: left;
+}
+
+.textTitle{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.faqHomeSection{
+    background-color: black;
+    text-align: center;
+}
+
+.registerEmailHome{
+    color: white;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.registerEmailForm{
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.signUpButton{
+    background-color: rgb(229,9,20);
+    border: none;
+    color: white;
+    font-weight: 700;
+    font-size: inherit;
+    padding: 0 1rem;
+    border-radius: 5px;
+}
+
+.signUpButton:hover{
+    background-color: rgb(193,17,25);
+}
