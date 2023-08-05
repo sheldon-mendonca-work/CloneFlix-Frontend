@@ -2,8 +2,9 @@ import React from "react"
 import classes from './SelectLanguage.module.css';
 import { GlobeIcon } from "../svg-icons/svg-icons";
 
-const SelectLanguage:React.FC<{type: string}> = (props) => {
-    return <div className={classes.selectLanguage}>
+const SelectLanguage:React.FC<{className: string}> = (props) => {
+    const { className } = props;
+    return <div className={`${classes.selectLanguage} ${className}`}>
         <span className={classes.globeIconSpan}><GlobeIcon className={classes.globeIcon}/></span>
         <select className={classes.selectDropdown}>
             <option value={'en-IN'}>English</option>

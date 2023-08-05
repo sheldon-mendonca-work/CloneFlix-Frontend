@@ -1,0 +1,67 @@
+.headingHeader{
+    align-items: center;
+    height: 5.5rem;
+    padding: 0.5rem 4rem;
+    width: 100%;
+    z-index: 2;
+    background-image: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.5));
+    position: fixed;
+    top: 0;
+}
+
+.headingActions{
+    display: flex;
+}
+
+.netflixIcon{
+    width: 6rem;
+    height: 1.5rem;
+    margin-right: 1.5rem;
+    color: rgb(229,9,20);
+    fill: currentColor;
+    display: block;
+    cursor: pointer;
+}
+
+.navList{
+    display: flex;
+    font-size: 1rem;
+}
+
+.navList>li{
+    padding: 0 0.5rem;
+}
+
+
+.accountList>li{
+    padding: 0.4rem 1rem;
+}
+
+.accountLink{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.accountLink:hover{
+    text-decoration: underline;
+}
+
+.accountLink>span>svg{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.accountChildrenMode{
+    padding: 0.4rem 0;
+}
+
+.accountSignOut{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+}
+
+.accountSignOut:hover{
+    text-decoration: underline;
+}

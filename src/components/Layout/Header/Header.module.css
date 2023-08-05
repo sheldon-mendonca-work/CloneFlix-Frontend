@@ -1,0 +1,17 @@
+.headingHeader{
+    position: absolute;
+    align-items: center;
+    height: 5.5rem;
+    padding: 1rem 6rem;
+    width: 100%;
+    z-index: 1;
+}
+
+.netflixIcon{
+    width: 9.25rem;
+    height: 2.5rem;
+    color: rgb(229,9,20);
+    fill: currentColor;
+    display: block;
+    cursor: pointer;
+}

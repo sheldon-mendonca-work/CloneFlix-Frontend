@@ -1,0 +1,21 @@
+.billImgDiv{
+    background-image: linear-gradient(to bottom left, rgba(0,0,0,0.01), rgba(0,0,0,0.4));
+}
+
+.billImg{
+    position: relative;
+    z-index: -1;
+    width: 100%;
+}
+
+.playIcon{
+    margin-right: 5px;
+}
+
+.infoIcon{
+    margin-right: 5px;
+}
+
+.billboardSlider{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0), rgba(20, 20, 20,1));
+}

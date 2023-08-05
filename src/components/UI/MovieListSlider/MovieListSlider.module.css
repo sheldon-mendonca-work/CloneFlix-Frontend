@@ -1,0 +1,35 @@
+.scroll{
+    display: flex;
+    height: 10rem;
+    justify-content: space-between;
+}
+
+.slider{
+    display: flex;
+    width: 100%;
+    transition: all 0.3s;
+}
+
+.sliderTitle{
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 5px;
+    z-index: 1;
+}
+
+.explore{
+    overflow: hidden;
+    z-index: 1;
+    position: relative;
+    color: #54b9c5;
+}
+
+.exploreAll{
+    height: 1.5rem;
+    vertical-align: middle;
+    font-weight: 700;
+}
+
+.explore:hover>svg{
+    scale: 1.1;
+}

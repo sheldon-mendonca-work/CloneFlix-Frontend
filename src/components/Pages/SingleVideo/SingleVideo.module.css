@@ -1,0 +1,53 @@
+.billboardImgDiv{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.01) 0, rgba(20,20,20,0.4) 70%, rgba(20,20,20,1) 100%);
+}
+
+.billboardImg{
+    z-index: -1;
+    position: relative;
+}
+
+.bannerDiv{
+    bottom: 10%;
+    position: absolute;
+    padding: 0 3rem;
+}
+
+.playIcon{
+    margin-right: 5px;
+}
+
+.playIcon,
+.plusIcon,
+.likeIcon{
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.leftButtonControl{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.grayColor{
+    color: rgb(120,120,120);
+    margin-right: 5px;
+}
+
+.genreBadge{
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    padding: 0 0.5rem;
+    line-height: 1.2rem;
+    font-size: 0.8rem;
+    margin-right: 5px;
+}
+
+.seasonPanel{
+    display: flex;
+    gap: 1rem;
+}

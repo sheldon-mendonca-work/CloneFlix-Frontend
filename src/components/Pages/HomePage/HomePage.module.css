@@ -2,23 +2,17 @@
     color: white;
     font-size: 1.5rem;
     z-index: -2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .headingSection{
-    background-color: transparent;
     background-image:linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0, rgba(0, 0, 0, 0.3) 40%, rgba(0, 0, 0, 0.8) 100%);
     overflow: hidden;
     height: 45rem;
     position: relative;
-    
-}
-
-.netflixIcon{
-    width: 9.25rem;
-    height: 2.5rem;
-    color: rgb(229,9,20);
-    fill: currentColor;
-    display: block;
+    border-bottom: 0.5rem solid #4e4e4e;
 }
 
 .headingBanner{
@@ -32,21 +26,6 @@
     width: 100%;
     object-fit: cover;
 }
-
-.headingHeader{
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
-    align-items: center;
-    height: 5.5rem;
-    padding: 1rem 6rem;
-    width: 100%;
-}
-
-.headingActions{
-    display: flex;
-}
-
 .headingContentDiv{
     height: 100%;
     width: 100%;
@@ -62,9 +41,10 @@
 
 .splitHalfSection{
     display: flex;
-    padding: 4rem;
+    padding: 2rem 0;
     gap: 1rem;
     background-color: black;
+    border-bottom: 0.5rem solid #4e4e4e;
 }
 
 .splitHalfDiv{
@@ -91,6 +71,8 @@
 .faqHomeSection{
     background-color: black;
     text-align: center;
+    padding: 2rem 0;
+    border-bottom: 0.5rem solid #4e4e4e;
 }
 
 .registerEmailHome{

@@ -1,13 +1,23 @@
-import React, { useState } from 'react';
+import React from 'react';
 import classes from './HomePage.module.css';
 import RegisterEmailHome from './RegisterEmailHome';
+import {
+    Accordion,
+    AccordionItem,
+    AccordionButton,
+    AccordionPanel,
+    AccordionIcon,
+    Box,
+    Container,
+    Center,
+  } from '@chakra-ui/react'
 
 const FAQItems = [
     {
         question: "What is Netflix?",
-        answer: `Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on thousands of internet-connected devices.
+        answer: `Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more - on thousands of internet-connected devices.
 
-        You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!`
+        You can watch as much as you want, whenever you want, without a single ad - all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!`
     },
     {
         question: "How much does Netflix cost?",
@@ -21,7 +31,7 @@ const FAQItems = [
     },
     {
         question: "How do I cancel?",
-        answer: `Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.`
+        answer: `Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees - start or stop your account anytime.`
     },
     {
         question: "What can I watch on Netflix?",
@@ -36,32 +46,26 @@ const FAQItems = [
 ]
 
 const FAQHomeSection = () => {
-    const [ showFAQ, setShowFAQ ] = useState<string>('none');
-
-    const faqButtonClickHandler = (clickQuestion: string) => {
-        
-        if(clickQuestion === showFAQ){
-            setShowFAQ('none');
-        }else{
-            setShowFAQ(clickQuestion);
-        }
-    }
 
     return <section className={classes.faqHomeSection}>
-        <div className={classes.textTitle}>Frequently Asked Questions</div>
-        <ul>{
-            FAQItems.map((faq) => (
-                <li key={faq.question}>
-                    <button onClick={()=>faqButtonClickHandler(faq.question)}>
-                        <span>{faq.question}</span>
-                        <span>+</span>
-                    </button>
-                    {showFAQ === faq.question &&<div>{faq.answer}</div>}
-                </li>
-            ))
-        }
-        </ul>
-        <RegisterEmailHome />
+        <Container maxW={'container.xl'}>
+            <Center className={classes.textTitle} mb={'5'}>Frequently Asked Questions</Center>
+            <Accordion allowToggle>
+                { FAQItems.map(faq => (
+                <AccordionItem key={faq.question}   mb={'2'} border={'none'}>
+                    <AccordionButton p={'4'} bg={'#2d2d2d'} _hover={{bg:'#4e4e4e'}}>
+                        <Box as='span' flex='1' textAlign='left' fontSize={'2xl'}>
+                            {faq.question}
+                        </Box>
+                        <AccordionIcon />
+                    </AccordionButton>
+                    <AccordionPanel fontSize={'2xl'} p={'4'} mt={'1'} bg={'#2d2d2d'}>
+                    {faq.answer}
+                    </AccordionPanel>
+                </AccordionItem>))}
+            </Accordion>
+            <RegisterEmailHome />
+        </Container>
     </section>
 }
 

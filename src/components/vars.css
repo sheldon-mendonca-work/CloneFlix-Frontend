@@ -1,4 +1,7 @@
 :root{
     --button-red: rgb(229,9,20); /* #e50914 */
     --button-red-hover: rgb(193,17,25); /* #c11119 */
+    --gray-color: rgb(45, 45, 45); /* #2d2d2d */
+    --gray-color-hover: rgb(78,78,78); /* #4e4e4e */
+    --gray-color-text: rgb(140, 140, 140); /* #8c8c8c */
 }

@@ -1,0 +1,15 @@
+.spacer{
+    height: 6rem;
+}
+
+.searchList>li{
+    padding: 0 10px;
+}
+
+.searchList>li:not(:last-child){
+    border-right: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.searchLink:hover{
+    color: red;
+}

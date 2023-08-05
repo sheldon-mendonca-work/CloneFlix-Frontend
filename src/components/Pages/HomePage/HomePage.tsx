@@ -2,7 +2,7 @@ import React from 'react';
 import HeadingSection from './HeadingSection';
 import SplitHalfSection from './SplitHalfSection';
 import FAQHomeSection from './FAQHomeSection';
-import Footer from '../Layout/Footer/Footer';
+import Footer from '../..//Layout/Footer/Footer';
 import classes from './HomePage.module.css';
 import EnjoyOnTV from './HomePageVideos/EnjoyOnTV';
 import ProfileKids from './HomePageVideos/ProfileKids';
