@@ -11,7 +11,6 @@ const BrowsePage = () => {
     const query = new URLSearchParams(search);
     const paramField = query.get('jbv');
 
-    console.log(paramField)
 
     return <main className={classes.browseMainPage}>
         <HeaderHome />

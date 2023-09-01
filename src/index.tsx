@@ -12,10 +12,10 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <Router>
-    <ChakraProvider>
-      <Provider store={store}>
+    <Provider store={store}>
+      <ChakraProvider>
         <App />
-      </Provider>
-    </ChakraProvider>
+      </ChakraProvider>
+    </Provider>
 </Router>
 );

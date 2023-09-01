@@ -1,6 +1,6 @@
 import React from "react"
 import classes from './SelectLanguage.module.css';
-import { GlobeIcon } from "../svg-icons/svg-icons";
+import { GlobeIcon } from "../../Util/svg-icons/svg-icons";
 
 const SelectLanguage:React.FC<{className: string}> = (props) => {
     const { className } = props;

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import SelectLanguage from "../../Util/SelectLanguage/SelectLanguage";
+import SelectLanguage from "../../UI/SelectLanguage/SelectLanguage";
 import classes from './Footer.module.css';
 import { Box, Container, Flex, Grid, GridItem } from "@chakra-ui/react";
 

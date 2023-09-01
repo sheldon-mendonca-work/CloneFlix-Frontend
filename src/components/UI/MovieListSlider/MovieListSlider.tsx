@@ -38,7 +38,7 @@ const MovieListSlider = () => {
                 </span>}
         </Box>
         <div className={classes.scroll}>
-            <Center w={'4rem'} bg={'blackAlpha.700'} zIndex={'2'} color={'white'} onClick={()=>sliderClickHandler(false)} visibility={`${showExploreIcon ? 'visible': 'hidden'}`}><ChevronLeftIcon boxSize={'2.5rem'} zIndex={'2'}/></Center>
+            <Center w={'4rem'} bg={'blackAlpha.700'} zIndex={'2'} color={'white'} cursor="pointer" onClick={()=>sliderClickHandler(false)} visibility={`${showExploreIcon ? 'visible': 'hidden'}`}><ChevronLeftIcon boxSize={'2.5rem'} zIndex={'2'}/></Center>
             <div className={classes.slider} style={{transform: `translateX(${sliderIndex*100}%)`}}>
                 <MovieItem />
                 <MovieItem />
@@ -59,7 +59,7 @@ const MovieListSlider = () => {
                 <MovieItem />
                 <MovieItem />
             </div>
-            <Center w={'4rem'} bg={'blackAlpha.700'} zIndex={'2'} color={'white'} onClick={()=>sliderClickHandler(true)} visibility={`${showExploreIcon ? 'visible': 'hidden'}`}><ChevronRightIcon boxSize={'2.5rem'}/></Center>
+            <Center w={'4rem'} bg={'blackAlpha.700'} zIndex={'2'} color={'white'} cursor="pointer" onClick={()=>sliderClickHandler(true)} visibility={`${showExploreIcon ? 'visible': 'hidden'}`}><ChevronRightIcon boxSize={'2.5rem'}/></Center>
         </div>
     </Box>
     )

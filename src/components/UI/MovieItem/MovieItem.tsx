@@ -10,7 +10,7 @@ const MovieItem = () => {
     return <div className={`${classes.movieItem}`} onMouseEnter={()=>setShowCardBody(true)}  
     onMouseLeave={()=>setShowCardBody(false)}
     >
-        <div className={`${classes.movieItemCard}  ${showCardBody ? classes.movieItemCardExpanded : undefined}`} >
+        <div className={`${classes.movieItemCard}  ${showCardBody ? classes.movieItemCardExpanded : ""}`} >
             <div className={classes.movieItemImgDiv}>
                 <img className={classes.movieItemImg} src="NetflixImages/AAAABeqfT2_-pIeAnhkqj0GpudyhvXhx94AqyF9tkpneVdXu-3OATs6WlyyJ.jpg" alt="Peaky Blinders" />
             </div>

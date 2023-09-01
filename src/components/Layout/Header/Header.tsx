@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Spacer } from "@chakra-ui/react";
 import classes from './Header.module.css';
 import { NetflixIcon } from "../../Util/svg-icons/svg-icons";
-import SelectLanguage from "../../Util/SelectLanguage/SelectLanguage";
+import SelectLanguage from "../../UI/SelectLanguage/SelectLanguage";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {

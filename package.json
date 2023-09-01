@@ -16,6 +16,7 @@
     "@types/node": "^16.18.38",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "@types/react-redux": "^7.1.26",
     "dayjs": "^1.11.9",
     "framer-motion": "^10.12.21",
     "react": "^18.2.0",

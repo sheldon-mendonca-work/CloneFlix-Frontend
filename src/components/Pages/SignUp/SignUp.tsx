@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import Header from '../../Layout/Header/Header';
-import FloatingLabelPassword from '../../Util/FloatingLabelInput/FloatingLabelPassword';
+import FloatingLabelPassword from '../../UI/FloatingLabelInput/FloatingLabelPassword';
 import classes from './SignUp.module.css';
-import { Box, Button, Checkbox, Container, Flex, FormControl, Heading, Spacer } from "@chakra-ui/react";
+import { Box, Button, Container, Flex, FormControl, Heading } from "@chakra-ui/react";
 import Footer from '../../Layout/Footer/Footer';
 
 const SignUp = () => {
