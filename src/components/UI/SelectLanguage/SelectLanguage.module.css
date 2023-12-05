@@ -5,16 +5,39 @@
     align-items: center;
     align-self: stretch;
     position: relative;
-    border: 1px solid currentColor;
+    border: 2px solid #777;
+    border-radius: 0.2rem;
+    overflow: hidden;
 }
 
-.globeIconSpan{
+.globeIconSpanLeft{
     position: absolute;
     pointer-events: none;
     height: 100%;
-    width: 100%;
-    left: 0.75rem;
+    left: 0.5rem;
     right: auto;
+}
+
+@media only screen and (max-width: 1278px) {
+    .globeIconSpanLeft{
+        left: 0.4rem;
+    }
+}
+
+.globeIconSpanRight{
+    position: absolute;
+    pointer-events: none;
+    height: 100%;
+    right: 0.1rem;
+    left: auto;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1278px) {
+    .globeIconSpanRight{
+        right: 0.4rem;
+    }
 }
 
 .globeIcon{
@@ -28,9 +51,12 @@
     background-color: black;
     color: white;
     border: 1px solid rgba(0,0,0,0.5);
-    padding-left: 2rem;
     display: flex;
     align-items: center;
     font-size: 1rem;
+    padding: 0.3rem 1.3rem 0 1.6rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 

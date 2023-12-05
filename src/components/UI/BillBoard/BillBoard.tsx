@@ -1,7 +1,7 @@
 import { Box, Button } from '@chakra-ui/react';
 import classes from './BillBoard.module.css';
 import { InfoIcon, PlayIcon } from '../../Util/svg-icons/svg-icons';
-import MovieListSlider from '../MovieListSlider/MovieListSlider';
+// import MovieListSlider from '../MovieListSlider/MovieListSlider';
 
 const BillBoard = () => {
     return <Box position={'relative'}  w='100%' h='100%' fontSize={'1rem'}>
@@ -33,7 +33,7 @@ const BillBoard = () => {
         <Box position={'absolute'} top='50%' right='0' w={'10rem'} color={'white'} bg={'blackAlpha.500'} p={'1rem'} fontSize={'xl'} borderLeft={'4px solid white'}>
             A
         </Box>
-        <Box pos={'absolute'} bottom={'0'} w={'100%'} className={classes.billboardSlider}><MovieListSlider /></Box>
+        {/* <Box pos={'absolute'} bottom={'0'} w={'100%'} className={classes.billboardSlider}><MovieListSlider videoId={"NES_30AB83E0FBAF5B8D959F3CE51919A8-3895CC532878C7-8F598A8B66_p_1693655775594"}/></Box> */}
     </Box>
 };
 

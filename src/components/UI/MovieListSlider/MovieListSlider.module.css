@@ -1,13 +1,16 @@
 .scroll{
     display: flex;
-    height: 10rem;
     justify-content: space-between;
+    position: relative;
+    z-index: 1;
 }
 
 .slider{
     display: flex;
     width: 100%;
     transition: all 0.3s;
+    position: relative;
+    z-index: 1;
 }
 
 .sliderTitle{
@@ -28,6 +31,14 @@
     height: 1.5rem;
     vertical-align: middle;
     font-weight: 700;
+    width: 100%;
+}
+
+.hideExploreAll{
+    height: 1.5rem;
+    vertical-align: middle;
+    font-weight: 700;
+    width: 0;
 }
 
 .explore:hover>svg{

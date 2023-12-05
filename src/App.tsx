@@ -1,11 +1,11 @@
-import React from 'react';
 import './App.css';
-import AllRoutes from './Routes/AllRoutes';
+import { RouterProvider } from 'react-router-dom';
+import router from './Routes/AllRoutes';
 
-function App() {
+const App = (): JSX.Element => {
   return (
     <div className="App">
-      <AllRoutes />
+      <RouterProvider router={router} />
     </div>
   );
 }

@@ -26,7 +26,7 @@ const Footer = () => {
                 <GridItem><Link className={classes.footerLink} to="#">Only on Netflix</Link></GridItem>
             </Grid>
             <Flex minH={'4.5rem'} color={'whiteAlpha.700'} py={'1rem'}>
-                <SelectLanguage className="footer"/>
+                <SelectLanguage className="footer" color="white" backgroundColor="black"/>
             </Flex>
             <Box my={'1rem'}>Netflix India</Box>
         </Container>

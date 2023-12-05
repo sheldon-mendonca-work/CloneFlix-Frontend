@@ -7,6 +7,18 @@
     z-index: 1;
 }
 
+@media only screen and (max-width: 1278px) {
+    .headingHeader{
+        padding: 1rem 2rem;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .headingHeader{
+        padding: 1rem;
+    }
+}
+
 .netflixIcon{
     width: 9.25rem;
     height: 2.5rem;
@@ -14,4 +26,10 @@
     fill: currentColor;
     display: block;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1278px) {
+    .netflixIcon{
+        scale: 0.8;
+    }
 }

@@ -1,0 +1,31 @@
+.head{
+    height: 6rem;
+    width: 6rem;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    color: white;
+    font-size: 1rem;
+    letter-spacing: normal;
+}
+
+.deviceIconDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px 0;
+}
+
+.deviceItem{
+    margin: 8px 0;
+}
+
+.activePlan{
+    color: red;
+}
+
+.inActivePlan{
+    opacity: 0.5;
+}

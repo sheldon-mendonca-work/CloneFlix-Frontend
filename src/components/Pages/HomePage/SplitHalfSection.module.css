@@ -1,0 +1,56 @@
+
+.splitHalfSection{
+    display: flex;
+    padding: 2rem 0;
+    gap: 1rem;
+    background-color: black;
+    border-bottom: 0.5rem solid #4e4e4e;
+}
+
+.splitHalfDiv{
+    flex: 0 0 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .splitHalfDiv{
+        align-items: center;
+    }
+
+    .splitHalfDiv.splitHalfContentDiv{
+        flex: 0;
+    }
+
+    .splitHalfDiv.splitHalfImgDiv{
+        flex: 1;
+    }
+}
+
+.splitHalfImgDiv{
+    overflow: hidden;
+    height: 25rem;
+}
+
+.splitHalfContentDiv{
+    text-align: left;
+}
+
+.textTitle{
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+@media only screen and (max-width: 900px) {
+    .textTitle{
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .splitHalfContent{
+        text-align: center;
+    }
+}

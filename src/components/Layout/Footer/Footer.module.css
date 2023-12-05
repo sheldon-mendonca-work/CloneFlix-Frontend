@@ -10,3 +10,13 @@
     cursor: pointer;
     text-decoration: underline;
 }
+
+.footerGridLink{
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media only screen and (max-width: 900px) {
+    .footerGridLink{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

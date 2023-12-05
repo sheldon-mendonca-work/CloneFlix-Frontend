@@ -1,7 +1,7 @@
 import { Box, Flex, Input, ListItem, Spacer, UnorderedList } from "@chakra-ui/react";
 import classes from './HeaderHome.module.css';
 import { CircleQuestionMarkIcon, NetflixIcon, NotificationIcon, PencilIcon, ProfileTransferIcon, UserAccountIcon } from "../../Util/svg-icons/svg-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import {  ChevronDownIcon, Search2Icon } from "@chakra-ui/icons";
 import { useState } from "react";
 
@@ -13,12 +13,12 @@ const HeaderHome = () => {
     return <Flex className={`${classes.headingHeader}`}>
     <Box onClick={()=>navigate('/')}><NetflixIcon className={classes.netflixIcon}/></Box>
     <UnorderedList className={classes.navList} listStyleType={'none'} color={'white'}>
-        <ListItem><Link to="/browse">Home</Link></ListItem>
-        <ListItem><Link to="#">TV Shows</Link></ListItem>
-        <ListItem><Link to="#">Movies</Link></ListItem>
-        <ListItem><Link to="#">New & Popular</Link></ListItem>
-        <ListItem><Link to="#">My List</Link></ListItem>
-        <ListItem><Link to="#">Browse by Languages</Link></ListItem>
+        <ListItem _hover={{color: "#bbb"}}><NavLink to="/browse">Home</NavLink></ListItem>
+        <ListItem _hover={{color: "#bbb"}}><NavLink to="#">TV Shows</NavLink></ListItem>
+        <ListItem _hover={{color: "#bbb"}}><NavLink to="#">Movies</NavLink></ListItem>
+        <ListItem _hover={{color: "#bbb"}}><NavLink to="#">New & Popular</NavLink></ListItem>
+        <ListItem _hover={{color: "#bbb"}}><NavLink to="#">My List</NavLink></ListItem>
+        <ListItem _hover={{color: "#bbb"}}><NavLink to="#">Browse by Languages</NavLink></ListItem>
     </UnorderedList>
     <Spacer />
     <Flex className={classes.headingActions} gap={'1rem'} alignItems={'center'}
@@ -31,8 +31,11 @@ const HeaderHome = () => {
         </Flex>
         <Box>Children</Box>
         <NotificationIcon className={classes.notification} />
-        <Flex onPointerEnter={()=>setShowAccountMenu(true)} onPointerLeave={()=>setShowAccountMenu(false)} position={'relative'} alignItems={'center'}>
-            <div><img src='NetflixImages/AAAABY20DrC911ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5Nryz.png' alt="User Profile"/></div>
+        <Flex onMouseEnter={()=>setShowAccountMenu(true)} onMouseLeave={()=>{setShowAccountMenu(false)}} position={'relative'} alignItems={'center'}>
+            <div>
+                <img src='NetflixImages/AAAABY20DrC911ewwAs6nfEgb1vrORxRPP9IGmlW1WtKuaLIz8VxCx5Nryz.png' alt="User Profile"/>
+            </div>
+            
             <ChevronDownIcon transform={showAccountMenu ? 'rotate(-180deg)': 'rotate(0)'} transition={'all 0.2s'}/>
             { showAccountMenu && <Box position={'absolute'} top='100%' right={'0'} w={'15rem'} border={'1px solid black'}>
                 <UnorderedList bg={'blackAlpha.800'} color={'white'} listStyleType={'none'} fontSize={'sm'} m={'0'} className={classes.accountList}>

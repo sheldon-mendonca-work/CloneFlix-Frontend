@@ -34,7 +34,7 @@ const FloatingLabelPassword:React.FC<any> = (props) => {
         <FormControl variant="floating" id={props.id} isRequired={props.required} isInvalid={inputIsValid}  >
             <Input placeholder=" " type={showPassword ? 'text' : 'password'} pl={4} minH={'3rem'} className={`${classes['floatingLabelInput-input']} ${props.inputClass}`} minLength={4} maxLength={60} onChange={props.onChange} value={props.value}/>
             
-            <button  className={`${props.passwordShowClass} ${classes.showPassword}`} onClick={toggleShowPasswordHandler}>
+            <button type="button" className={`${props.passwordShowClass} ${classes.showPassword}`} onClick={toggleShowPasswordHandler}>
                 {showPassword ? 'HIDE' : 'SHOW'}
             </button>
           <FormLabel top = {0}

@@ -3,12 +3,11 @@ import SelectLanguage from "../../UI/SelectLanguage/SelectLanguage";
 import classes from './Footer.module.css';
 import { Box, Container, Flex, Grid, GridItem } from "@chakra-ui/react";
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
     return <footer className={classes.footerDark}>
         <Container maxW={'container.xl'}>
             <Box pt={'1rem'} pb={'1rem'}>Questions? Call <Link className={classes.footerLink} to="/">000-800-919-1694</Link></Box>
-            <Grid
-            templateColumns={'repeat(4,1fr)'} gap={'1rem'} my={'1rem'}>
+            <Grid className={classes.footerGridLink} gap={'1rem'} my={'1rem'}>
                 <GridItem><Link className={classes.footerLink} to="#">FAQ</Link></GridItem>
                 <GridItem><Link className={classes.footerLink} to="#">Help Centre</Link></GridItem>
                 <GridItem><Link className={classes.footerLink} to="#">Account</Link></GridItem>
@@ -26,7 +25,7 @@ const Footer = () => {
                 <GridItem><Link className={classes.footerLink} to="#">Only on Netflix</Link></GridItem>
             </Grid>
             <Flex minH={'4.5rem'} color={'whiteAlpha.700'} py={'1rem'}>
-                <SelectLanguage className="footer"/>
+                <SelectLanguage className="footer" color="white" backgroundColor="black"/>
             </Flex>
             <Box my={'1rem'}>Netflix India</Box>
         </Container>

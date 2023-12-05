@@ -4,11 +4,13 @@ import PopoverHover from "../../UI/PopoverHover/PopoverHover";
 import { LikeIcon, PlayIcon, PlusIcon } from "../../Util/svg-icons/svg-icons";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import TitleCardContainer from "../../UI/TitleCardContainer/TitleCardContainer";
+import { useAppSelector } from "../../../store/hookTypes";
 
 const SingleVideo = () => {
     const location = useLocation();
     const navigate = useNavigate();
     const prevLocation = location?.pathname.split('?')[0];
+    const currentVideo = useAppSelector((state) => state.videoList.currentVideo);
 
     const isOpen = true;
     const onClose = ()=>{
@@ -20,6 +22,10 @@ const SingleVideo = () => {
         {id: 2, season: 1, episodes: 13},
         {id: 3, season: 1, episodes: 14},
     ]
+    
+    const generateRandomNumber = Number(Math.floor(Math.random()*100).toFixed(2)+1);
+
+    const movieImageURL = currentVideo.itemSummary?.value?.boxArt?.url.slice(0,79) + ".jpg";
 
     return <>
         <Modal isOpen={isOpen} onClose={onClose} isCentered motionPreset='slideInRight' size={'5xl'}>
@@ -27,12 +33,10 @@ const SingleVideo = () => {
         <ModalContent overflow={'hidden'}  color={'white'}>
             <Box p={0} pos={'relative'}>
                 <div className={classes.billboardImgDiv}>
-                    <img src="NetflixImages/AAAABcuR9HoQuPWPhkVg7rDEq51HeFbblzubYC1gNdohv4Rh7DyXQQE6_UuA.jpg" alt="Black Mirror" className={classes.billboardImg} />
+                    <img src={movieImageURL} alt={currentVideo.itemSummary?.value?.title} className={classes.billboardImg} />
                 </div>
                 <div className={classes.bannerDiv}>
-                    <div>
-                        <img src="NetflixImages/AAAABTF-xURXXVFrokSvDrZyqMEsYRUGj1UxDoFZb9uzhhpzl3VT5-sXz1L_.png" alt="Black Mirror" className="BillBoard_billImg__ZcLwU" width="100%" />
-                    </div>
+                    
                     <Flex>
                         <div className={classes.leftButtonControl}>
                             <PopoverHover text="Expand More">
@@ -54,20 +58,21 @@ const SingleVideo = () => {
                 <Flex gap={'2rem'} mb={'1rem'}>
                     <Box flex={2}>
                         <Box mb={'0.5rem'}>
-                            <span className={classes.grayColor}>98% Match</span>
-                            <span className={classes.grayColor}>2023</span>
-                            <span className={classes.grayColor}>2 Seasons</span>
+                            <span className={classes.greenColor}>98% Match</span>
+                            
+                            <span className={classes.grayColor}>{currentVideo?.itemSummary?.value?.releaseYear}</span>
+                            <span className={classes.grayColor}>{currentVideo?.itemSummary?.value?.numSeasonsLabel}</span>
                             <span className={classes.genreBadge}>HD</span>
                         </Box>
                         <Box mb={'0.5rem'}>
-                            <span className={classes.genreBadge}>A</span>
-                            Agore, nudity, sexual violence, violence
+                            <span className={classes.genreBadge}>{currentVideo?.itemSummary?.value?.maturity?.rating?.value}</span>
+                            {currentVideo?.itemSummary?.value?.maturity?.rating?.specificRatingReason}
                         </Box>
-                        <Box mb={'0.5rem'} fontSize={'2xl'} fontWeight={'700'}>
-                            #8 in TV Shows Today
-                        </Box>
-                        <Box mb={'0.5rem'}>
-                            To gain the skills he needs to surpass his powerful father, Baki enters Arizona State Prison to take on the notorious inmate known as Mr. Unchained.
+                        { generateRandomNumber <= 10 && <Box fontSize={'2xl'} fontWeight={'700'}>
+                            #{generateRandomNumber} in TV Shows Today
+                        </Box>}
+                        <Box mb={'0.5rem'} mt={'1rem'}>
+                        {currentVideo?.itemSummary?.value?.synopses?.shortSynopsis}
                         </Box>
                     </Box>
                     <Box  flex={1}>
