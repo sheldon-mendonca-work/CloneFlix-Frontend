@@ -3,7 +3,7 @@ import axios from "axios";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { actionType } from "../store";
 
-const backendUrl: String = "http://localhost:8080";
+const backendUrl: String = "https://cloneflix-backend.netlify.app";
 
 export const fetchVideosList = createAsyncThunk("videoList/fetchVideos", async()=>{
   const response = await axios.get(`${backendUrl}/`);

@@ -7,7 +7,7 @@ export type actionType = {
   type: String
 };
 
-export const backendUrl: String = "http://localhost:8080";
+export const backendUrl: String = "https://cloneflix-backend.netlify.app";
 
 export type ThunkAPIType = {
   state: {

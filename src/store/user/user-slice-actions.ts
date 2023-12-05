@@ -3,7 +3,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { initUserState, initUserStateType } from "./user-slice";
 import { RootState, actionType } from "../store";
 
-const backendUrl: String = "http://localhost:8080";
+const backendUrl: String = "https://cloneflix-backend.netlify.app";
 
 export const updateEmailHandler = (state: initUserStateType, action: actionType) => {
     state.emailAddress = action.payload.userEmail;
