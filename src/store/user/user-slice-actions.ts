@@ -125,8 +125,7 @@ export const userRegisterRejected = (state: initUserStateType, action: actionTyp
 // LOGOUT
 
 export const userLogout = createAsyncThunk('user/logout',
-    async(userId: string | void, thunkAPI) => {
-        const state = thunkAPI.getState() as RootState;
+    async(userId: string | void) => {
         const response = await axios.get(`${backendUrl}/api/user/logout`);
         return response.data;
     }
